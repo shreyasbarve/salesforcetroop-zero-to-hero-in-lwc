@@ -1,0 +1,35 @@
+<template>
+  <lightning-card title="Car List using for:each loop">
+    <div class="slds-var-m-around_medium">
+      <ul class="slds-has-dividers_around-space">
+        <template for:each={carList} for:item="car">
+          <li key={car} class="slds-item">{car}</li>
+        </template>
+      </ul>
+    </div>
+  </lightning-card>
+
+  <!-- iterator -->
+  <lightning-card title="Iterator loop">
+    <div class="slds-var-m-around_medium">
+      <ul class="slds-has-dividers_around-space">
+        <template iterator:ceo={ceoList}>
+          <div key={ceo.value.id}>
+            <div lwc:if={ceo.first} class="slds-box slds-theme_shade">
+              <strong>List of top companies and CEOs</strong>
+            </div>
+
+            <li class="slds-item">
+              <strong>{ceo.value.company}</strong>
+              <p>{ceo.value.name}</p>
+            </li>
+
+            <div lwc:if={ceo.last} class="slds-box slds-theme_shade">
+              <strong>Thanks for the list</strong>
+            </div>
+          </div>
+        </template>
+      </ul>
+    </div>
+  </lightning-card>
+</template>

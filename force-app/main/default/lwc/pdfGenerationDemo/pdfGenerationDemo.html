@@ -1,0 +1,44 @@
+<template>
+  <div class="container">
+    <div class="inside-container">
+      <img src={imageUrl} style="height: 40px; width: 150px" />
+      <div class="float-right">
+        <div>Invoice #: {invoiceData.invoiceNo}</div>
+        <div>Created #: {invoiceData.invoiceCreated}</div>
+        <div>Due #: {invoiceData.invoiceDue}</div>
+      </div>
+    </div>
+    <div>
+      <div class="float-left">
+        <div>{invoiceData.companyName}</div>
+        <div>{invoiceData.address1}</div>
+        <div>{invoiceData.address2}</div>
+      </div>
+      <div class="float-right" style="text-align: right">
+        <div>{clientData.client}</div>
+        <div>{clientData.username}</div>
+        <div>{clientData.email}</div>
+      </div>
+    </div>
+    <div class="table-headers">
+      <div class="float-left"><strong>Services</strong></div>
+      <div class="float-right"><strong>Amount</strong></div>
+    </div>
+    <template iterator:service={services}>
+      <div key={service.value.name} class="iterator-css">
+        <div class="float-left">{service.value.name}</div>
+        <div class="float-right">${service.value.amount}</div>
+      </div>
+      <div if:true={service.last} key={service.value.name} class="iterator-css">
+        <div class="float-right">
+          <strong>Total Amount: ${totalAmount}</strong>
+        </div>
+      </div>
+    </template>
+  </div>
+  <lightning-button
+    variant="brand"
+    label="Generate PDF"
+    onclick={pdfHandler}
+  ></lightning-button>
+</template>

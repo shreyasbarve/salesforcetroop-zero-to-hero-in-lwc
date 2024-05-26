@@ -1,0 +1,51 @@
+<template>
+  <lightning-card variant="narrow" icon-name="standard:opportunity">
+    <h1 slot="title">Card Title</h1>
+    <div slot="actions">
+      <lightning-button-icon icon-name="utility:down"></lightning-button-icon>
+    </div>
+    <div>This is a body</div>
+    <div slot="footer">
+      <h6>This is a footer</h6>
+    </div>
+  </lightning-card>
+
+  <div class="slds-var-m-bottom_medium"></div>
+
+  <c-custom-lightning-card>
+    <h1 slot="title">Card Title</h1>
+    <div slot="actions">
+      <lightning-button-icon icon-name="utility:down"></lightning-button-icon>
+    </div>
+    <div>This is a body</div>
+    <div slot="footer">
+      <h6>This is a footer</h6>
+    </div>
+  </c-custom-lightning-card>
+
+  <div class="slds-var-m-bottom_medium"></div>
+
+  <c-custom-lightning-card>
+    <h1 slot="title">This is a card without footer</h1>
+    <div slot="actions">
+      <lightning-button-icon icon-name="utility:down"></lightning-button-icon>
+    </div>
+    <div>This is a body</div>
+  </c-custom-lightning-card>
+
+  <div class="slds-var-m-bottom_medium"></div>
+
+  <c-custom-lightning-card>
+    <h1 slot="title">This is a card without action</h1>
+    <div>This is a body</div>
+    <div slot="footer">
+      <h6>This is a footer</h6>
+    </div>
+  </c-custom-lightning-card>
+
+  <div class="slds-var-m-bottom_medium"></div>
+
+  <c-custom-lightning-card>
+    <h1 slot="title">This is a card with only title</h1>
+  </c-custom-lightning-card>
+</template>

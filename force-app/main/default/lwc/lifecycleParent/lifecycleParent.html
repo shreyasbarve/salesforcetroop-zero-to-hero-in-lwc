@@ -1,0 +1,37 @@
+<template>
+  <lightning-card title="lifecycle hook parent card">
+    <div class="slds-var-m-around_medium">
+      <!-- to show the rerender behaviour of renderedCallBack() method on state or change -->
+      <!-- <lightning-input
+        type="text"
+        label="Enter some text"
+        onkeyup={changeHandler}
+      ></lightning-input>
+      <p>{name}</p> -->
+
+      <template if:false={isChildVisible}>
+        <lightning-button
+          variant="brand"
+          label="Show Child"
+          title="Show Child"
+          onclick={handleShowChild}
+          class="slds-var-m-left_x-small"
+        ></lightning-button>
+      </template>
+
+      <template if:true={isChildVisible}>
+        <lightning-button
+          variant="outline"
+          label="Hide Child"
+          title="Hide Child"
+          onclick={handleHideChild}
+          class="slds-var-m-left_x-small"
+        ></lightning-button>
+      </template>
+
+      <template lwc:if={isChildVisible}>
+        <c-lifecycle-child></c-lifecycle-child>
+      </template>
+    </div>
+  </lightning-card>
+</template>

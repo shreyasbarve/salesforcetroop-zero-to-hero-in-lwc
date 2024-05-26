@@ -1,0 +1,12 @@
+<template>
+  <lightning-card title="getRelatedListsInfoDemo">
+    <div class="slds-var-m-around_medium">
+      <h1>Related List on Account object</h1>
+      <template if:true={relatedData}>
+        <template for:each={relatedData} for:item="list">
+          <p key={list.label}>{list.label}</p>
+        </template>
+      </template>
+    </div>
+  </lightning-card>
+</template>

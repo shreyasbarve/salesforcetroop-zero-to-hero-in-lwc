@@ -1,0 +1,33 @@
+<template>
+  <!-- 2 way binding example -->
+  <lightning-card variant="base" title="Two way data binding">
+    <div class="slds-var-m-around_medium">
+      <lightning-input
+        type="text"
+        label="Enter title"
+        onkeyup={changeHandler}
+      ></lightning-input>
+      <div>{fullname} of the course is {title}</div>
+    </div>
+  </lightning-card>
+
+  <!-- @track example -->
+  <lightning-card variant="base" title="Learning @track properties">
+    <div class="slds-var-m-around_medium">
+      <lightning-input
+        type="text"
+        label="Enter city name"
+        onkeyup={trackHandler}
+      ></lightning-input>
+      <div>{address.city} is my city</div>
+    </div>
+  </lightning-card>
+
+  <!-- getter example -->
+  <lightning-card variant="base" title="Getter Demo">
+    <div class="slds-var-m-around_medium">
+      <div>First User name is {firstUser}</div>
+    </div>
+    <div>Mutiplication of {num1} and {num2} is {multiply}</div>
+  </lightning-card>
+</template>

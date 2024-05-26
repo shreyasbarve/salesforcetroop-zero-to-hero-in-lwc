@@ -1,0 +1,24 @@
+<template>
+  <lightning-card title="Carousel">
+    <div class="slds-var-m-around_medium">
+      <lightning-carousel disable-auto-scroll>
+        <template
+          if:true={carouselDetails}
+          for:each={carouselDetails}
+          for:item="item"
+          for:index="index"
+        >
+          <lightning-carousel-image
+            key={item.Id}
+            src={item.src}
+            header={item.header}
+            description={item.description}
+            alternative-text={item.alternativeText}
+            href={item.href}
+          >
+          </lightning-carousel-image>
+        </template>
+      </lightning-carousel>
+    </div>
+  </lightning-card>
+</template>
