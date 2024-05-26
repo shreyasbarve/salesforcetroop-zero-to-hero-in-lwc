@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>CarController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>pageTemplate_2_7_3</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>CAR_HUB_LOGO</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
+        <members>Car_Explorer</members>
+        <members>Car__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>CAR_HUB_UtilityBar</members>
+        <members>Car_Explorer</members>
+        <members>Car_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Car__c-Car Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>carCard</members>
+        <members>carFilter</members>
+        <members>carTile</members>
+        <members>carTileList</members>
+        <members>placeholder</members>
+        <members>similarCars</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>CarSelected</members>
+        <members>CarsFiltered</members>
+        <name>LightningMessageChannel</name>
+    </types>
+    <version>59.0</version>
+</Package>
